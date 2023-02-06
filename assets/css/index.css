@@ -1,0 +1,22 @@
+html, body {
+  margin: 0px;
+  background-color: #F1EEE9;
+}
+
+.main-bg {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-bg .status {
+  font-family: "Montserrat", sans-serif;
+  color: #8E9398;
+}
+.main-bg .creator {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #8E9398;
+}/*# sourceMappingURL=index.css.map */
