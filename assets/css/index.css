@@ -1,68 +1,142 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Manrope:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=Comfortaa:wght@400;700&display=swap");
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-.mnrope {
-  font-family: "Manrope", sans-serif;
+.barlow {
+  font-family: "Barlow", sans-serif;
 }
 
 .comforta {
   font-family: "Comfortaa", cursive;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background-color: #EFEFEF;
+  background-color: #4C566A;
   margin: 0;
   padding: 0;
-  position: relative;
 }
 
 header {
-  width: 100%;
-  padding: 0 8em;
-  position: fixed;
-  z-index: 100;
-  background-color: #EFEFEF;
+  padding: 0em 5.625em;
 }
-header .header-content {
-  width: inherit;
-  border-bottom: 3px solid #000000;
+header .nav-container {
+  background-color: #E5E9F0;
+  position: relative;
 }
-header .header-content nav {
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-}
-header .header-content nav .nav-item {
-  font-size: 1.25rem;
-}
-
-.landing {
-  height: 100vh;
-  padding: 10em 8em 0 8em;
-  z-index: 2;
-}
-.landing .landing-content {
-  margin-top: 1;
-}
-.landing .landing-content .landing-img {
-  background-image: url("/assets/img/landing-img.png");
-  background-size: cover;
-  padding: 15em 0;
-}
-.landing .landing-content .landing-title {
+header .nav-container .nav-holder_parent {
+  z-index: 10;
+  padding: 2em;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 2px solid #4C566A;
+  width: 100%;
 }
-.landing .landing-content .landing-title h1 {
-  font-weight: 300;
+header .nav-container .nav-holder_parent .nav_logo img {
+  height: 30px;
+}
+header .nav-container .nav-holder_parent .nav_btn button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+header .nav-container .nav-holder_parent .nav_btn button .nav_btn-menu {
+  width: 2.25em;
+  height: 2.25em;
+  stroke: #4C566A;
+  stroke-width: 2px;
+}
+header .nav-container .nav-holder_child {
+  z-index: 9;
+  background-color: #E5E9F0;
+  padding: 10em 2em 0em 2em;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+}
+header .nav-container .nav-holder_child .nav_menus {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+header .nav-container .nav-holder_child .nav_menus .nav_menu a {
+  display: flex;
+  gap: 2em;
+  color: #4C566A;
+  text-decoration: none;
+}
+header .nav-container .nav-holder_child .nav_menus .nav_menu a .nav_menu_no {
+  font-size: 3rem;
+}
+header .nav-container .nav-holder_child .nav_menus .nav_menu a .nav_menu_txt {
   font-size: 5rem;
 }
+header .nav-container .nav-holder_child .nav_menus .nav_menu:nth-child(1) {
+  order: 1;
+}
+header .nav-container .nav-holder_child .nav_menus .nav_menu:nth-child(2) {
+  order: 3;
+}
+header .nav-container .nav-holder_child .nav_menus .nav_menu:nth-child(3) {
+  order: 5;
+}
+header .nav-container .nav-holder_child .nav_menus .nav_menu:nth-child(4) {
+  order: 2;
+}
+header .nav-container .nav-holder_child .nav_menus .nav_menu:nth-child(5) {
+  order: 4;
+}
+header .nav-container .nav-holder_child .nav_menus .nav_menu:nth-child(6) {
+  order: 6;
+}
 
-.about-me {
-  height: 100vh;
-  z-index: 2;
-  background-color: red;
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 0;
+  }
+  header .nav-container .nav-holder_parent .nav_logo img {
+    height: 15px;
+  }
+  header .nav-container .nav-holder_parent .nav_btn button .nav_btn-menu {
+    width: 1.75em;
+    height: 1.75em;
+  }
+  header .nav-container .nav-holder_child .nav_menus {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  header .nav-container .nav-holder_child .nav_menus .nav_menu a {
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .nav-container .nav-holder_child .nav_menus .nav_menu a .nav_menu_no {
+    font-size: 2rem;
+  }
+  header .nav-container .nav-holder_child .nav_menus .nav_menu a .nav_menu_txt {
+    font-size: 3rem;
+  }
+  header .nav-container .nav-holder_child .nav_menus .nav_menu:nth-child(1) {
+    order: 1;
+  }
+  header .nav-container .nav-holder_child .nav_menus .nav_menu:nth-child(2) {
+    order: 2;
+  }
+  header .nav-container .nav-holder_child .nav_menus .nav_menu:nth-child(3) {
+    order: 3;
+  }
+  header .nav-container .nav-holder_child .nav_menus .nav_menu:nth-child(4) {
+    order: 4;
+  }
+  header .nav-container .nav-holder_child .nav_menus .nav_menu:nth-child(5) {
+    order: 5;
+  }
+  header .nav-container .nav-holder_child .nav_menus .nav_menu:nth-child(6) {
+    order: 6;
+  }
 }/*# sourceMappingURL=index.css.map */
