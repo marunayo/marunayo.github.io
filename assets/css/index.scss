@@ -27,6 +27,9 @@ body {
 header {
     padding: 0em 5.625em;
     z-index: 100;
+    position: fixed;
+    width: 100%;
+    // overflow: hidden;
 
     .nav-container {
         background-color: #E5E9F0;
@@ -69,7 +72,7 @@ header {
         }
 
         .nav-holder_child {
-            z-index: 9;
+            z-index: 10;
             background-color: #E5E9F0;
             padding: 10em 2em 0em 2em;
             position: absolute;
@@ -119,7 +122,9 @@ header {
 }
 
 .landing {
+    z-index: 1;
     // background-color: red;
+    // width: 100vw;
     padding: 0em 5.625em;
 
     .landing_container {
@@ -130,7 +135,7 @@ header {
 
         .landing-content_author {
             border-bottom: 2px solid #E5E9F0;
-            padding: 5em 2em;
+            padding: 7.5em 2em 5em 2em;
 
             .landing_author {
                 display: flex;
@@ -146,9 +151,10 @@ header {
 
         .landing_tagline {
             // border: 2px solid red;
-            padding: 0em 0em;
+            padding: 5em 0em 0em 0em;
 
             h1 {
+                margin: 0;
                 font-size: 12rem;
                 font-weight: 300;
                 text-align: center;
@@ -159,7 +165,26 @@ header {
                 }
             }
         }
+
+        .landing_img {
+            width: 100%;
+            text-align: center;
+            padding: 0em 2em;
+            img {
+                width: 100%;
+                height: 455px;
+                object-position: 50% 5%;
+                object-fit: cover;
+            }
+        }
     }
+}
+
+.about-me {
+    z-index: 1; 
+    // width: 100vw;
+    height: 100vh;
+    background-color: beige;
 }
 
 @media only screen and (max-width: 600px) {
@@ -222,6 +247,63 @@ header {
                     .nav_menu:nth-child(6) {
                         order: 6;
                     }
+                }
+            }
+        }
+    }
+
+    .landing {
+        padding: 0em;
+    
+        .landing_container {
+            border-right: 2px solid #E5E9F0;
+            border-left: 2px solid #E5E9F0;
+            height: 100vh;
+            padding: 10em 0em 0em 0em;
+    
+            .landing-content_author {
+                border-bottom: 2px solid #E5E9F0;
+                padding: 0.5em 2em 2.5em 2em;
+    
+                .landing_author {
+                    display: flex;
+                    justify-content: space-between;
+        
+                    p {
+                        color: #E5E9F0;
+                        font-size: 1.25rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+    
+            .landing_tagline {
+                // border: 2px solid red;
+                padding: 2.5em 0em 0em 0em;
+    
+                h1 {
+                    margin: 0;
+                    font-size: 6rem;
+                    font-weight: 300;
+                    text-align: center;
+                    color: #E5E9F0;
+    
+                    span {
+                        color: #80ED99;
+                    }
+                }
+            }
+    
+            .landing_img {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                padding: 0em 2em;
+                img {
+                    width: 100%;
+                    height: 50%;
+                    object-position: 50% 5%;
+                    object-fit: cover;
                 }
             }
         }
